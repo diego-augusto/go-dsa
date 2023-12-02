@@ -1,8 +1,6 @@
-package godsa
+package valid_parentheses
 
 import "github.com/emirpasic/gods/stacks/arraystack"
-
-//()[]{}
 
 func IsValidParentheses(s string) bool {
 	st := arraystack.New()

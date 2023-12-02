@@ -1,9 +1,10 @@
-package godsa_test
+package two_sum_test
 
 import (
-	godsa "go-dsa"
 	"reflect"
 	"testing"
+
+	"github.com/diego-augusto/go-dsa/two_sum"
 )
 
 func TestTwoSum(t *testing.T) {
@@ -32,7 +33,7 @@ func TestTwoSum(t *testing.T) {
 
 	for _, tt := range tc {
 		t.Run("", func(t *testing.T) {
-			r := godsa.TwoSum(tt.nums, tt.target)
+			r := two_sum.TwoSum(tt.nums, tt.target)
 			if !reflect.DeepEqual(r, tt.output) {
 				t.Errorf("\ninput: %d %d\nexpected: %d\ngot: %d", tt.nums, tt.target, tt.output, r)
 			}

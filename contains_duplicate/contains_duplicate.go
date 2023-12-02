@@ -1,4 +1,4 @@
-package godsa
+package contains_duplicate
 
 func ContainsDuplicate_V1(nums []int) bool {
 

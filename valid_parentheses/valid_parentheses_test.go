@@ -1,8 +1,9 @@
-package godsa_test
+package valid_parentheses_test
 
 import (
-	godsa "go-dsa"
 	"testing"
+
+	"github.com/diego-augusto/go-dsa/valid_parentheses"
 )
 
 func TestIsValidParentheses(t *testing.T) {
@@ -27,7 +28,7 @@ func TestIsValidParentheses(t *testing.T) {
 
 	for _, tt := range tc {
 		t.Run("", func(t *testing.T) {
-			r := godsa.IsValidParentheses(tt.input)
+			r := valid_parentheses.IsValidParentheses(tt.input)
 			if r != tt.output {
 				t.Errorf("\ninput: %s\nexpected: %t\ngot: %t", tt.input, tt.output, r)
 			}

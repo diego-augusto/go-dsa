@@ -1,8 +1,9 @@
-package godsa_test
+package contains_duplicate_test
 
 import (
-	godsa "go-dsa"
 	"testing"
+
+	"github.com/diego-augusto/go-dsa/contains_duplicate"
 )
 
 func TestContainsDuplicated(t *testing.T) {
@@ -31,7 +32,7 @@ func TestContainsDuplicated(t *testing.T) {
 
 	for _, tt := range tc {
 		t.Run("", func(t *testing.T) {
-			r := godsa.ContainsDuplicate_V2(tt.input)
+			r := contains_duplicate.ContainsDuplicate_V2(tt.input)
 			if r != tt.output {
 				t.Errorf("\ninput: %d\nexpected: %t\ngot: %t", tt.input, tt.output, r)
 			}

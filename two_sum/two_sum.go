@@ -1,4 +1,4 @@
-package godsa
+package two_sum
 
 func TwoSum(nums []int, target int) []int {
 	m := map[int]int{}

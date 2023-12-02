@@ -1,8 +1,9 @@
-package godsa_test
+package valid_anagram_test
 
 import (
-	godsa "go-dsa"
 	"testing"
+
+	"github.com/diego-augusto/go-dsa/valid_anagram"
 )
 
 func TestIsValidAnagram(t *testing.T) {
@@ -26,7 +27,7 @@ func TestIsValidAnagram(t *testing.T) {
 
 	for _, tt := range tc {
 		t.Run("", func(t *testing.T) {
-			r := godsa.IsAnagram_V2(tt.input_s, tt.input_t)
+			r := valid_anagram.IsAnagram_V2(tt.input_s, tt.input_t)
 			if r != tt.output {
 				t.Errorf("\ninput: %s %s\nexpected: %t\ngot: %t", tt.input_s, tt.input_t, tt.output, r)
 			}

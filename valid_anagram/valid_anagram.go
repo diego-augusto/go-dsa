@@ -1,4 +1,4 @@
-package godsa
+package valid_anagram
 
 func IsAnagram_V1(s string, t string) bool {
 
