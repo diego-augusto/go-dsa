@@ -23,11 +23,16 @@ func Test(t *testing.T) {
 			k:   1,
 			out: []int{1},
 		},
+		{
+			in:  []int{1, 2},
+			k:   2,
+			out: []int{1, 2},
+		},
 	}
 	for _, tc := range testCases {
 		t.Run(tc.desc, func(t *testing.T) {
 			r := topKFrequent(tc.in, tc.k)
-			assert.Equal(t, tc.out, r)
+			assert.ElementsMatch(t, tc.out, r)
 		})
 	}
 }

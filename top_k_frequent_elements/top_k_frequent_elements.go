@@ -8,17 +8,18 @@ func topKFrequent(nums []int, k int) []int {
 	}
 
 	arr := make([][]int, len(nums)+1)
-	for key, value := range m {
-		arr[value] = append(arr[value], key)
+	for kk, v := range m {
+		arr[v] = append(arr[v], kk)
 	}
 
-	r := make([]int, 0)
+	result := make([]int, 0)
+
 	for i := len(arr) - 1; i >= 0; i-- {
-		r = append(r, arr[i]...)
-		if len(r) == k {
-			break
+		if len(arr[i]) != 0 && k > 0 {
+			result = append(result, arr[i]...)
+			k = k - len(arr[i])
 		}
 	}
 
-	return r
+	return result
 }
